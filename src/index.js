@@ -4,8 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Para importar el componente debemos llamarlo por el nombre que fue creado
+import PrimerComponente from"./App";
+
 ReactDOM.render(
   <React.StrictMode>
+  
+  
     <App />
   </React.StrictMode>,
   document.getElementById('root')
