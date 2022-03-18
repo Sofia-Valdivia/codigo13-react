@@ -1,14 +1,36 @@
 body {
   margin: 0;
-  padding:0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 form {
-  margin:12px
+  margin: 12px;
 }
-.title{
-  color: orangered;
+.title {
+  color: orange;
 }
 h5 {
-  color: purple;
+  text-transform :uppercase;
+  margin-bottom: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.card-pokemon {
+  max-width: 300px;
+  min-height: 400px;
+  max-height: 400px;
+}
+
+.img-pokemon {
+  min-height: 250px;
+  max-height: 250px;
+  object-fit: contain !important;
+  margin-top: 15px;
+}
+.name-pokemon {
+  text-transform: uppercase;
+  text-align: center;
 }
