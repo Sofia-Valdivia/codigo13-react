@@ -7,12 +7,14 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 // Para poder importar un componente debos llamarlo por el nombre que fue exportado
 import PrimerComponente from "./App";
-import Home from "./pages/Home"
+//import Home from "./pages/Home"
+import App from "./App";
 ReactDOM.render(
   <React.StrictMode>
     {/* Para usar un componente debo tratarlo como si fuera una etiqueta HTML */}
     {/*<PrimerComponente />*/}
-    <Home/>
+  
+    <App/>
   </React.StrictMode>,
   document.getElementById("root")
 );
