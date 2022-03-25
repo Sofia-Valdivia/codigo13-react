@@ -18,7 +18,7 @@ const FormUser = () => {
 
   // Ahora debemos construir una funcion que se encargue de almacenar los valores
   // de los input en el objeto
-  const handleInputValues = (e) => {
+  const handleInputValues = (e) => { 
     // debemos extrar 2 cosas de event
     // 1 el name de cada input
     // 2 el value de cada input

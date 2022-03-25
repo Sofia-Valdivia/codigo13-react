@@ -67,7 +67,7 @@ const Home = () => {
                 </CardContent>
               </Card>
             </Grid>
-          ))}
+          ))} 
       </Grid>
     </Container>
   );
