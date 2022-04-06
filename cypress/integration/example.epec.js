@@ -15,7 +15,7 @@ describe("Mi primera prueba con cypress", () => {
       // aca vamos a verificar si es que nuestro home funciona o no
       //cy => cypress
       // Esto va a entrar a localhost:3000 y decirno si funciona o no
-      cy.visit("codigo13-react-tan.vercel.app");
+      cy.visit("https://codigo13-react-tan.vercel.app/");
       
       cy.contains("Pokedex");
 
@@ -27,7 +27,7 @@ describe("Mi primera prueba con cypress", () => {
 
     //Prueba para banderas:
     it ("pruebas para banderas",()=>{
-        cy.visit ("codigo13-react-tan.vercel.app/flags");
+        cy.visit ("https://codigo13-react-tan.vercel.app/flags");
         cy.wait (5000).then(()=>{
          cy.get("input:first").type("peru");   
          cy.contains("Republic of Peru").click();
@@ -37,16 +37,16 @@ describe("Mi primera prueba con cypress", () => {
     })
 //Prueba para youtube:
 it ("pruebas para youtube",()=>{
-    cy.visit ("codigo13-react-tan.vercel.app/youtube");
+    cy.visit ("https://codigo13-react-tan.vercel.app/youtube");
     cy.wait (5000).then(()=>{
      
      
-     cy.contains("victor");
+     cy.contains("hola");
     })
         
 })   
 it("prueba de login", () => {
-    cy.visit("codigo13-react-tan.vercel.app/login");
+    cy.visit("https://codigo13-react-tan.vercel.app/login");
     // ahora vamos a ver de que otra podemos acceder a los inputs
     // usando el name del inputs podemos encontrar uno especifico y
     // poder escribir en el
