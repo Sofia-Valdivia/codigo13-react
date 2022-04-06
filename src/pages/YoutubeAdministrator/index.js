@@ -3,14 +3,13 @@ import {
   Button,
   Container,
   Grid,
-  Table,  
+  Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
   Paper,
-
 } from "@mui/material";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
@@ -20,9 +19,7 @@ import swal from "sweetalert";
 //Aquí importaré mis componentes:
 import MovieCreate from "../../components/MovieCreate";
 
-
 const YoutubeAdministrator = () => {
-  
   const [movies, setMovies] = useState([]);
   // reto deben completar el codigo para poder traer las peliculas
   // cuando la pagina de inicie
@@ -32,28 +29,26 @@ const YoutubeAdministrator = () => {
     setMovies(response);
   };
 
-const fetchDeleteItem=async(id)=>{
-    const response=await swal({
-        title: "Esta seguro de eliminar?",
-        text: "Recuerda que una vez eliminado no hay vuelta atras",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      });
+  const fetchDeleteItem = async (id) => {
+    const response = await swal({
+      title: "Esta seguro de eliminar?",
+      text: "Recuerda que una vez eliminado no hay vuelta atras",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    });
 
-if (response){
-
-await deleteItem(id);
-await fetchMovies();
-}
-};
+    if (response) {
+      await deleteItem(id);
+      await fetchMovies();
+    }
+  };
 
   useEffect(() => {
     fetchMovies();
   }, []);
   return (
     <Container>
-  
       <Grid container spacing={3} mt={5}>
         <Grid item md={6}>
           <h4>Lista de Peliculas</h4>
@@ -61,7 +56,7 @@ await fetchMovies();
         <Grid item md={6} sx={{ textAlign: "right" }}>
           <MovieCreate />
         </Grid>
-      </Grid> 
+      </Grid>
 
       <TableContainer component={Paper}>
         <Table>
@@ -88,7 +83,7 @@ await fetchMovies();
                     <Button color="info">
                       <EditRoundedIcon />
                     </Button>
-                    
+
                     <Button
                       color="error"
                       className="delete-button"
@@ -100,8 +95,6 @@ await fetchMovies();
                 </TableRow>
               ))}
           </TableBody>
-
-    
         </Table>
       </TableContainer>
     </Container>
