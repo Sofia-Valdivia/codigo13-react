@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Grid, TextField, Button } from "@mui/material";
 import { getMovieDetail, updateMovie } from "../../service/movies";
@@ -43,7 +43,7 @@ const MovieUpdate = () => {
 
   useEffect(() => {
     fetchDetailMovie();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
   return (

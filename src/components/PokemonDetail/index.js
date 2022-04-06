@@ -8,7 +8,11 @@ import {
   Slider,
 } from "@mui/material";
 import { getDataFromPokemon } from "../../service";
+
+
 const PokemonDetail = (props) => {
+  //Pso 1 importo useState para modificar mi variable y se encargue de abrir o cerrar mi Dialog
+  //le ponemos false, pues al inicio sera cerrado false, al abrir se abre y será true.
   const [abrir, setAbrir] = useState(false);
   const [pokemonData, setPokemonData] = useState({});
   // como se lee un atributo que estamos recibiendo del componente
@@ -122,7 +126,7 @@ const PokemonDetail = (props) => {
                       />
                     </Grid>
                   </Grid>
-                </Grid>
+                </Grid> 
               </Grid>
             </div>
           )}
